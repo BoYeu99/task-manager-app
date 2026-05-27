@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý Công Việc</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋 Quản Lý Công Việc</h1>
+      <p>Quản lý công việc của bạn một cách hiệu quả</p>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <form id="taskForm">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Nhập công việc mới..."
+            required
+          />
+          <button type="submit" class="btn btn-primary">Thêm Công Việc</button>
+        </form>
+      </section>
+
+      <section class="tasks-section">
+        <div class="task-filters">
+          <button class="filter-btn active" data-filter="all">Tất Cả</button>
+          <button class="filter-btn" data-filter="active">Đang Thực Hiện</button>
+          <button class="filter-btn" data-filter="completed">Hoàn Thành</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <div id="emptyState" class="empty-state">
+          <p>Chưa có công việc nào. Thêm một công việc để bắt đầu! 🚀</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
